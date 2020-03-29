@@ -19,6 +19,21 @@
     font-size: 90%;
 }
 
+.goodtitle{
+    font-size: 1em;
+    font-weight: bolder;
+    margin-right: 0.2em;
+    color: #2ea9f0;
+    font-family: -apple-system, BlinkMacSystemFont, roboto, "segoe ui", Helvetica, Arial, sans-serif;
+}
+
+.post .contents+hr{
+    margin-bottom: 0;
+}
+hr+.post-body{
+    margin-top: 0 !important; 
+}
+
 .post-body {
     margin-top: 5em !important;
     a {
@@ -27,6 +42,21 @@
         &:hover {
             text-decoration-color: alpha(var(--color-primary), 0.5);
         }
+    }
+
+    h2::before {
+        @extend .goodtitle;
+        content: "#";
+    }
+    
+    h3::before {
+        @extend .goodtitle;
+        content: "##";
+    }
+    
+    h4::before {
+        @extend .goodtitle;
+        content: "###";
     }
 }
 
