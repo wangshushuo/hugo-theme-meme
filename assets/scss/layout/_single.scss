@@ -206,6 +206,8 @@ code {
     padding: ($fontSize / 8) ($fontSize / 4);
     background-color: pink;
     font-size: 80%;
+    position: relative;
+    top: -1px;
 }
 pre {
     overflow: auto hidden;
