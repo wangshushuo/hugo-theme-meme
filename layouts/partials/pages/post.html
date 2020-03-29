@@ -45,6 +45,7 @@
                 {{- partial "utils/toc.html" . -}}
                 {{- $toc := .Scratch.Get "toc" }}
                 {{ $toc -}}
+                <hr>
             {{- end -}}
 
             {{- partial "utils/content.html" . -}}
