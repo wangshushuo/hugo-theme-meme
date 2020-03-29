@@ -7,7 +7,9 @@
 
 // Backdrop
 
+$blur:4px;
+
 @mixin blur {
-    -webkit-backdrop-filter: saturate(180%) blur(1em);
-    backdrop-filter:         saturate(180%) blur(1em);
+    -webkit-backdrop-filter: saturate(180%) blur($blur);
+    backdrop-filter:         saturate(180%) blur($blur);
 }
