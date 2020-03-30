@@ -50,6 +50,7 @@ svg {
 h1, h2, h3, h4, h5, h6 {
     margin: 1.618em 0 1em;
     color: var(--color-contrast-higher);
+    text-transform: uppercase;
     a {
         text-decoration: none !important;
         color: var(--color-contrast-higher);
