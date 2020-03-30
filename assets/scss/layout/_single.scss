@@ -4,6 +4,7 @@
 
 .post-title {
     text-align: center;
+    text-transform: uppercase;
 }
 
 .post-subtitle {
@@ -20,11 +21,11 @@
 }
 
 .goodtitle{
-    font-size: 1em;
-    font-weight: bolder;
-    margin-right: 0.2em;
-    color: #2ea9f0;
-    font-family: -apple-system, BlinkMacSystemFont, roboto, "segoe ui", Helvetica, Arial, sans-serif;
+    font-size: 0.6em;
+    font-weight: lighter;
+    margin-left: 0.2em;
+    vertical-align: super;
+    color: rgba(130,130,130,.5);
 }
 
 .post .contents+hr{
@@ -44,19 +45,19 @@ hr+.post-body{
         }
     }
 
-    h2::before {
-        @extend .goodtitle;
-        content: "#";
-    }
-    
-    h3::before {
+    h2::after {
         @extend .goodtitle;
         content: "##";
     }
     
-    h4::before {
+    h3::after {
         @extend .goodtitle;
         content: "###";
+    }
+    
+    h4::after {
+        @extend .goodtitle;
+        content: "####";
     }
 }
 
@@ -234,7 +235,7 @@ dd {
 
 code {
     padding: ($fontSize / 8) ($fontSize / 4);
-    background-color: pink;
+    background-color:var(--color-code-bg);
     font-size: 80%;
     position: relative;
     top: -1px;
