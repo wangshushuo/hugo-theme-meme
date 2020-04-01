@@ -1,7 +1,7 @@
-// @if ($headerLayoutFlex) {
-//     @supports not (backdrop-filter: none) {
-//         .header-wrapper {
-//             background-color: var(--color-bg);
-//         }
-//     }
-// }
+@if ($headerLayoutFlex) {
+    @supports (not (backdrop-filter: none)) and (not (-webkit-backdrop-filter: none))   {
+        .header-wrapper {
+            background-color: var(--color-bg);
+        }
+    }
+}
