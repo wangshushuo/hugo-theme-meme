@@ -7,7 +7,7 @@
 .category-item {
     color: var(--color-primary);
     font-size: 1.2em;
-    text-transform: uppercase;
+
     &:hover {
         color: alpha(var(--color-primary), 0.75);
     }
@@ -18,7 +18,7 @@
 }
 
 .category-post {
-    text-transform: uppercase;
+
     &:hover {
         color: var(--color-contrast-medium);
     }
