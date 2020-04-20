@@ -1,0 +1,26 @@
+<main class="home">
+    {{ with or .Site.Params.homeVideoWebm .Site.Params.homeVideoMp4 }}
+    <video poster="{{ $.Site.Params.homePoster }}" id="bgvid" style="z-index: -1;" playsinline autoplay muted loop>
+        {{ with $.Site.Params.homeVideoWebm }}
+        <source src="{{ . }}" type="video/webm" />
+        {{ end }}
+        {{ with $.Site.Params.homeVideoMp4 }}
+        <source src="{{ . }}" type="video/mp4" />
+        {{ end }}
+    </video>
+    {{ end }}
+    <div class="main-inner" style="z-index: 2;">
+        <div class="content">
+            {{ range first 1 .Site.Sections }}
+            <div class="section-list">
+                {{ range .Sections }}
+                <div>
+                    <a href="{{ .Permalink }}">{{ .Title }} {{ len .RegularPages }}</a>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        
+    </div>
+</main>

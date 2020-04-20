@@ -1,3 +1,6 @@
+.footer {
+    z-index: 2;
+}
 .home {
     font-family: STShusong, serif;
     &::before {
@@ -19,14 +22,23 @@
         min-width: 100%;
         position: absolute;
         z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-list{
+        display: flex;
+        font-size: 3em;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .content {
         text-align: center;
         width: auto;
-        max-width: 26em;
+        max-width: 50em;
         margin: 0 auto;
         color: #fff;
-        padding: 5em 1em 10em;
+        margin-top: -5em;
     }
     .links {
         color: #aaa;

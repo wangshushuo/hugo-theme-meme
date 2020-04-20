@@ -1,4 +1,12 @@
 {{ if .Site.Params.enablePostTags }}
+    {{ with .Params.keywords }}
+    <p>
+        <span>keywords:</span>
+        {{ range . }} 
+            <span>{{ . }}</span>
+        {{ end }}
+    </p>
+    {{ end }}
     {{ with .Params.tags }}
         <div class="post-tags">
             {{ range . }}

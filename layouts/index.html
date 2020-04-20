@@ -15,4 +15,8 @@
     {{ if eq .Site.Params.homeLayout "page" }}
         {{ partial "pages/post.html" . }}
     {{ end }}
+
+    {{ if eq .Site.Params.homeLayout "footage_and_posts" }}
+        {{ partial "pages/home-footage-posts.html" . }}
+    {{ end }}
 {{ end }}

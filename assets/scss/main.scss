@@ -350,7 +350,22 @@
     @import "pages/home-poetry";
 {{ end }}
 
-{{ if eq .Site.Params.homeLayout "footage" }}
+{{ if eq .Site.Params.homeLayout "footage"}}
+    // https://github.com/reuixiy/hugo-theme-meme/issues/51
+    {{ if strings.HasPrefix .Site.Params.homePoster "." }}
+        {{ $homePoster := printf `.%s` .Site.Params.homePoster }}
+        {{ .Scratch.Set "homePoster" $homePoster }}
+    {{ else }}
+        {{ .Scratch.Set "homePoster" .Site.Params.homePoster }}
+    {{ end }}
+    {{ $homePoster := .Scratch.Get "homePoster" }}
+
+    $homePoster: url({{ $homePoster }});
+
+    @import "pages/home-footage";
+{{ end }}
+
+{{ if eq .Site.Params.homeLayout "footage_and_posts"}}
     // https://github.com/reuixiy/hugo-theme-meme/issues/51
     {{ if strings.HasPrefix .Site.Params.homePoster "." }}
         {{ $homePoster := printf `.%s` .Site.Params.homePoster }}
