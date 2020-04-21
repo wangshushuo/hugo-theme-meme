@@ -9,11 +9,18 @@
         {{ end }}
     </video>
     {{ end }}
-    <div class="main-inner" style="z-index: 2;">
+    <div class="video-inner" style="z-index: 2;">
         <div class="content">
             {{ range first 1 .Site.Sections }}
             <div class="section-list">
-                {{ range .Sections }}
+                {{ range first 4 .Sections }}
+                    <a href="{{ .Permalink }}">
+                        <span>{{ .Title }}<span class="section-list-text">{{ len .RegularPages }}</span></span>
+                    </a>
+                {{ end }}
+            </div>
+            <div class="section-list">
+                {{ range last 3 .Sections }}
                     <a href="{{ .Permalink }}">
                         <span>{{ .Title }}<span class="section-list-text">{{ len .RegularPages }}</span></span>
                     </a>
