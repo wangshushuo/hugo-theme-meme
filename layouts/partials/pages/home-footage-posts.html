@@ -14,9 +14,9 @@
             {{ range first 1 .Site.Sections }}
             <div class="section-list">
                 {{ range .Sections }}
-                <div>
-                    <a href="{{ .Permalink }}">{{ .Title }} {{ len .RegularPages }}</a>
-                </div>
+                    <a href="{{ .Permalink }}">
+                        <span>{{ .Title }}<span class="section-list-text">{{ len .RegularPages }}</span></span>
+                    </a>
                 {{ end }}
             </div>
             {{ end }}

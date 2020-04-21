@@ -10,6 +10,14 @@
     #back-to-top {
         display: none;
     }
+    .home{
+        .content{
+            width: 100% !important;
+        }
+        .section-list{
+            flex-direction: column;
+        }
+    }
     @if ($headerLayoutFlex) {
         .header-inner {
             width: 100%;
