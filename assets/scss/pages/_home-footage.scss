@@ -16,7 +16,7 @@
         left: 0;
         z-index: 1;
     }
-    .main-inner {
+    .video-inner {
         background: rgba(0, 0, 0, 0.5);
         min-height: 100%;
         min-width: 100%;
@@ -28,7 +28,7 @@
     }
     .section-list{
         display: flex;
-        font-size: 3em;
+        font-size: 4em;
         flex-wrap: wrap;
         justify-content: space-between;
         &-text{
@@ -40,10 +40,13 @@
             -webkit-text-stroke-color: rgb(219, 37, 37);
             color: rgb(219, 37, 37);
         }
+        &:nth-child(2){
+            padding: 0.5em 2em;
+        }
     }
     .content {
         text-align: center;
-        width: $listWidth;
+        width: $listWidth * 1.2;
         margin: 0 auto;
         color: #fff;
         margin-top: -5em;
