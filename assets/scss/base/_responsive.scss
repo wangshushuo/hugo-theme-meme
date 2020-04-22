@@ -12,10 +12,18 @@
     }
     .home{
         .content{
-            width: 100% !important;
+            width: 90% !important;
         }
         .section-list{
-            flex-direction: column;
+            // flex-direction: column;
+            justify-content: center;
+            font-size: 10vw;
+            &>a{
+                margin: 1vh 4vw;
+            }
+            &:nth-child(2){
+                padding: 0em;
+            }
         }
     }
     @if ($headerLayoutFlex) {
