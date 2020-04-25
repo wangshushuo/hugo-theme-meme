@@ -3,7 +3,7 @@
 [data-theme="dark"] {
     @include defineColorHSL(--color-primary, $primaryColorDarkH, $primaryColorDarkS, $primaryColorDarkL);
     @include defineColorHSL(--color-bg, 231, 15%, 18%);
-    --color-code-bg: rgb(162, 56, 69);
+    // --color-code-bg: rgb(162, 56, 69);
     @include defineColorHSL(--color-contrast-lower, 231, 11%, 24%);
     @include defineColorHSL(--color-contrast-low, 234, 5%, 38%);
     @include defineColorHSL(--color-contrast-medium, 210, 1%, 70%);
