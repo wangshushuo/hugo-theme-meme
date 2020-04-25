@@ -41,4 +41,13 @@
 			font-size: 50%;
 		}
 	}
+	&img{
+		background-color: hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0.75);
+	}
+	&caption{
+		text-align: center;
+		&>span{
+			display: inline-block;
+		}
+	}
 }
