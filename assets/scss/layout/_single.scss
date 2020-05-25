@@ -1,5 +1,5 @@
 .single .main-inner {
-    width: $postWidth;
+    width: 720px;
 }
 
 .post-title {
@@ -19,26 +19,29 @@
     font-size: 90%;
 }
 
-.goodtitle{
+.goodtitle {
     font-size: 0.6em;
     font-weight: lighter;
     margin-left: 0.2em;
     vertical-align: super;
-    color: rgba(130,130,130,.5);
+    color: rgba(130, 130, 130, .5);
 }
 
-.post .contents+hr{
+.post .contents+hr {
     margin-bottom: 0;
 }
-hr+.post-body{
-    margin-top: 0 !important; 
+
+hr+.post-body {
+    margin-top: 0 !important;
 }
 
 .post-body {
     margin-top: 5em !important;
+
     a {
         text-decoration: underline;
         text-decoration-color: var(--color-contrast-low);
+
         &:hover {
             text-decoration-color: alpha(var(--color-primary), 0.5);
         }
@@ -48,12 +51,12 @@ hr+.post-body{
         @extend .goodtitle;
         content: "##";
     }
-    
+
     h3::after {
         @extend .goodtitle;
         content: "###";
     }
-    
+
     h4::after {
         @extend .goodtitle;
         content: "####";
@@ -65,6 +68,7 @@ hr+.post-body{
         margin: 0 0 1em;
         line-height: $lineHeight;
     }
+
     img {
         display: block;
         margin: 2em auto;
@@ -72,27 +76,34 @@ hr+.post-body{
         border: 1px solid var(--color-contrast-lower);
         clear: both;
     }
+
     video {
         display: block;
         max-width: 100%;
         margin: 2em auto;
         clear: both;
     }
+
     sup {
         font-size: 70%;
         vertical-align: super;
+
         a {
             text-decoration: none;
         }
     }
-    ol, ul {
+
+    ol,
+    ul {
         padding-left: 2em;
         line-height: $lineHeight;
     }
+
     hr {
         border: none;
         margin: 2.427em 0 1.5em;
         text-align: center;
+
         &::after {
             content: "···";
             letter-spacing: 2em;
@@ -106,8 +117,10 @@ blockquote {
     padding-left: 1em;
     color: var(--color-contrast-medium);
     border-left: 3px solid var(--color-contrast-low);
+
     a {
         color: var(--color-contrast-medium);
+
         &:hover {
             color: var(--color-primary);
         }
@@ -132,11 +145,15 @@ blockquote {
 
 .contents {
     margin-top: 5em;
-    ol, ul {
+
+    ol,
+    ul {
         list-style: none;
     }
 }
-ol, ul {
+
+ol,
+ul {
     &.toc {
         padding: 0;
         overflow: auto hidden;
@@ -148,15 +165,18 @@ ol, ul {
     font-size: 90%;
     margin-top: 5rem;
     word-break: break-all;
+
     hr {
         margin: 0;
         height: 1px;
         border: none;
         background-color: var(--color-contrast-medium);
+
         &::after {
             content: none;
         }
     }
+
     ol {
         margin: 1.618rem 0 0 !important;
         padding: 0 1rem 0 2rem !important;
@@ -168,6 +188,7 @@ ol, ul {
         fill: alpha(var(--color-contrast-high), 0.5);
         transition: fill $duration;
         margin-bottom: 0.3em;
+
         &:hover {
             fill: var(--color-primary);
         }
@@ -178,6 +199,7 @@ ol, ul {
     position: absolute;
     transform: translate(-150%);
 }
+
 .anchor-icon {
     width: 0.75em;
     height: 0.75em;
@@ -188,12 +210,21 @@ ol, ul {
     :root {
         --anchor-opacity: 0;
     }
+
     .anchor-link {
         opacity: var(--anchor-opacity);
         transition: all ($duration / 2);
     }
+
     .post {
-        h1, h2, h3, h4, h5, h6, .anchor-link {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .anchor-link {
             &:hover {
                 --anchor-opacity: 1;
             }
@@ -205,30 +236,37 @@ ol, ul {
     margin: 2em 0;
     overflow-x: auto;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     border-color: var(--color-contrast-lower);
 }
+
 th {
     font-weight: 700;
 }
-th, td {
+
+th,
+td {
     font-size: 0.9em;
     padding: 0.4em;
     border: 1px solid var(--color-contrast-lower);
 }
-table > tbody > tr:nth-of-type(odd) {
+
+table>tbody>tr:nth-of-type(odd) {
     background-color: alpha(var(--color-contrast-lower), 0.5);
 }
-table > tbody > tr:hover {
+
+table>tbody>tr:hover {
     background-color: var(--color-contrast-lower);
 }
 
 dt {
     font-weight: 700;
 }
+
 dd {
     margin-left: 2em;
 }
@@ -240,6 +278,7 @@ code {
     position: relative;
     top: -1px;
 }
+
 pre {
     overflow: auto hidden;
     font-size: 0.8rem;
@@ -247,6 +286,7 @@ pre {
     padding: 1em;
     line-height: 1.618;
     background-color: alpha(var(--color-contrast-lower), 0.75);
+
     code {
         background-color: unset;
         font-size: inherit;
@@ -271,6 +311,7 @@ pre {
         background-color: alpha(var(--color-contrast-medium), 0.5);
         transition: all $duration;
         cursor: pointer;
+
         &:hover {
             background-color: alpha(var(--color-primary), 0.5);
         }
@@ -284,7 +325,8 @@ pre {
     }
 }
 
-.katex-display, mjx-container[jax="CHTML"][display="true"] {
+.katex-display,
+mjx-container[jax="CHTML"][display="true"] {
     overflow: auto hidden;
     text-indent: 0;
 }

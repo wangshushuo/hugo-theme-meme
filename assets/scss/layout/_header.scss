@@ -4,14 +4,16 @@
 
 @if ($headerLayoutFlex) {
     .header {
-        position: fixed;
+        position: relative;
         width: 100%;
     }
+
     .header-wrapper {
-        padding: 1em 0;
+        // padding: 1em 0;
         @include blur;
         background: $headerBackground;
     }
+
     .header-inner {
         opacity: 0;
         display: flex;
@@ -20,14 +22,18 @@
         width: var(--main-inner);
         margin: 0 auto;
     }
+
     .site-brand {
         margin-right: 1em;
     }
-} @else {
+}
+
+@else {
     .header {
         position: relative;
         background: $headerBackground;
     }
+
     .site-brand {
         text-align: center;
     }
@@ -39,11 +45,14 @@
         height: $siteBrandSVGHeight;
         fill: $siteBrandSVGFill;
     }
-} @else {
+}
+
+@else {
     .brand {
         font-size: $siteBrandFontSize;
         color: $siteBrandFontColor;
         text-decoration: none;
+
         &:hover {
             color: $siteBrandFontColor;
         }

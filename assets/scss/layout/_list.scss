@@ -1,13 +1,15 @@
 .list .main-inner {
-    width: $listWidth;
+    width: 720px;
 }
 
 .list-title {
     text-align: center;
-    &>span{
+
+    &>span {
         position: relative;
     }
-    &-count{
+
+    &-count {
         position: absolute;
         right: -100px;
         top: 0;
@@ -25,22 +27,26 @@
     }
 }
 
-@if ($listDatePosition == "right") {
+@if ($listDatePosition=="right") {
     .list-item-title {
         flex: 1;
     }
+
     .list-item-time {
         text-align: right;
         margin-left: 1em;
     }
 }
-@if ($listDatePosition == "left") {
+
+@if ($listDatePosition=="left") {
     .list-item {
         flex-direction: row-reverse;
     }
+
     .list-item-time {
         flex: 1;
     }
+
     .list-item-title {
         text-align: right;
         margin-left: 1em;
@@ -56,12 +62,15 @@
     padding-bottom: 0.5em;
     display: flex;
     align-items: baseline;
+
     &:hover {
         border-bottom-color: var(--color-primary);
+
         ::before {
             background: var(--color-primary);
         }
     }
+
     ::before {
         content: " ";
         position: absolute;
@@ -76,12 +85,14 @@
         font-size: 1rem;
     }
 }
+
 .list-item-title {
     margin: 0 0.618em 0 2em;
     font-size: 1.2em;
     line-height: 1.5;
 
 }
+
 .list-item-time {
     margin: 0 0.618em 0 2em;
     color: var(--color-contrast-medium);
@@ -92,10 +103,12 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    &>span{
+
+    &>span {
         position: relative;
     }
-    &-count{
+
+    &-count {
         position: absolute;
         right: -100px;
         top: 0;
