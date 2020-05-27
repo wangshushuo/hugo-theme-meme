@@ -41,9 +41,13 @@
 			font-size: 50%;
 		}
 	}
-	&img{
-		background-color: hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0.75);
+	&number{
+		background-color: red;
+		padding: 0 4px;
+		color: white;
+		border-radius: 10px;
 	}
+	
 	&caption{
 		text-align: center;
 		&>span{

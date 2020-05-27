@@ -116,9 +116,16 @@
 
 <!-- Image & Video Footnote -->
 {{- $Content := .Scratch.Get "Content" -}}
-{{- $regexPatternFootnoteImage := `(<sup)(.+</sup><(img|video))` -}}
-{{- $regexReplacementFootnoteImage := `$1 style="float:right"$2` -}}
-{{- $Content := $Content | replaceRE $regexPatternFootnoteImage $regexReplacementFootnoteImage | safeHTML -}}
+    {{- $regexPatternFootnoteImage := `<span class="err">#</span><span class="mi">(\d)</span><span class="err">#</span>` -}}
+    {{- $regexReplacementFootnoteImage := `<span class="shortcodes_number">$1</span>` -}}
+    {{- $Content := $Content | replaceRE $regexPatternFootnoteImage $regexReplacementFootnoteImage -}}
+{{- .Scratch.Set "Content" $Content -}}
+
+<!-- Image & Video Footnote -->
+{{- $Content := .Scratch.Get "Content" -}}
+    {{- $regexPatternFootnoteImage := `(<sup)(.+</sup><(img|video))` -}}
+    {{- $regexReplacementFootnoteImage := `$1 style="float:right"$2` -}}
+    {{- $Content := $Content | replaceRE $regexPatternFootnoteImage $regexReplacementFootnoteImage | safeHTML -}}
 {{- .Scratch.Set "Content" $Content -}}
 
 <!-- Image & Video Caption -->
