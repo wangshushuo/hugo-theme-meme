@@ -27,9 +27,9 @@
     color: rgba(130, 130, 130, .5);
 }
 
-.post .contents+hr {
-    margin-bottom: 0;
-}
+// .post .contents+hr {
+//     margin-bottom: 0;
+// }
 
 hr+.post-body {
     margin-top: 0 !important;
@@ -101,7 +101,7 @@ hr+.post-body {
 
     hr {
         border: none;
-        margin: 2.427em 0 1.5em;
+        margin: 2.427em 0;
         text-align: center;
 
         &::after {
