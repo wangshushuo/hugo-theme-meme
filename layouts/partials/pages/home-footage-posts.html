@@ -1,6 +1,6 @@
 <main class="home">
     {{ with or .Site.Params.homeVideoWebm .Site.Params.homeVideoMp4 }}
-    <video poster="{{ $.Site.Params.homePoster }}" id="bgvid" style="z-index: -1;" playsinline autoplay muted loop>
+    <video poster="{{ $.Site.Params.homePoster }}" id="bgvid" style="z-index: 0;" playsinline autoplay muted loop>
         {{ with $.Site.Params.homeVideoWebm }}
         <source src="{{ . }}" type="video/webm" />
         {{ end }}
@@ -15,14 +15,14 @@
             <div class="section-list">
                 {{ range first 4 .Sections }}
                     <a href="{{ .Permalink }}">
-                        <span>{{ .Title }}<span class="section-list-text">{{ len .RegularPages }}</span></span>
+                        <span class="glitch" data-text="{{ .Title }}">{{ .Title }}<span class="section-list-text">{{ len .RegularPages }}</span></span>
                     </a>
                 {{ end }}
             </div>
             <div class="section-list">
                 {{ range last 3 .Sections }}
                     <a href="{{ .Permalink }}">
-                        <span>{{ .Title }}<span class="section-list-text">{{ len .RegularPages }}</span></span>
+                        <span class="glitch" data-text="{{ .Title }}">{{ .Title }}<span class="section-list-text">{{ len .RegularPages }}</span></span>
                     </a>
                 {{ end }}
             </div>
